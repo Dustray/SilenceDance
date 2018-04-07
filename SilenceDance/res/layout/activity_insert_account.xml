@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/top_bar_include"
+        layout="@layout/top_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="添加账单"
+        android:textColor="#ffffff"
+        android:textSize="22dp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top_bar_include"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <EditText
+                    android:id="@+id/edittext_acctitem"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_long_grey"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="账目"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp" >
+                </EditText>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/Fee"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_toLeftOf="@+id/Yuan"
+                    android:background="@drawable/btn_long_grey"
+                    android:hint="费用"
+                    android:numeric="decimal"
+                    android:paddingLeft="5dp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/Yuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="元"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#000000"
+                    android:textSize="30sp" >
+                </TextView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" >
+
+                <Button
+                    android:id="@+id/BtnDate"
+                    android:layout_width="55dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_long_grey"
+                    android:text="日期"
+                    android:textSize="15sp" >
+                </Button>
+
+                <TextView
+                    android:id="@+id/vdate"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#000000" >
+                </TextView>
+
+                <Button
+                    android:id="@+id/BtnTime"
+                    android:layout_width="55dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_long_grey"
+                    android:text="时间"
+                    android:textSize="15sp" >
+                </Button>
+
+                <TextView
+                    android:id="@+id/vtime"
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#000000" >
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayout06"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="类型"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#000000" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/Spinner01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_long_grey"
+                    android:paddingLeft="10dp" >
+                </Spinner>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider" />
+
+            <EditText
+                android:id="@+id/EditTextDESC"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_long_grey"
+                android:gravity="top"
+                android:hint="备注"
+                android:lines="5"
+                android:padding="5dp" >
+            </EditText>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayout08"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/BtnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_long_red"
+                    android:text="保 存"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" >
+                </Button>
+
+                <Button
+                    android:id="@+id/BtnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_long_white"
+                    android:text="取 消"
+                    android:textColor="#ff0000"
+                    android:textSize="20sp" >
+                </Button>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?android:attr/listDivider" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

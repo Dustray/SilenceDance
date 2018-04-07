@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".CreateCircleActivity" >
+
+    <include
+        android:id="@+id/top_bar_include"
+        layout="@layout/top_bar" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="创建我的舞圈"
+        android:textColor="#ffffff"
+        android:textSize="22dp" />
+
+    <LinearLayout
+        android:id="@+id/content_Text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar_include"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/circleName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/text_input"
+            android:ems="10"
+            android:hint="舞圈名称" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/circleDescription"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_input"
+            android:ems="10"
+            android:hint="舞圈描述" />
+
+        <Spinner
+            android:id="@+id/maxMember"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_input"
+            android:hint="成员加入类型" />
+        <Spinner
+            android:id="@+id/circleType"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_input"
+            android:hint="成员加入类型" />
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_long_red"
+            android:text="创建"
+            android:onClick="createCircle"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WebActivity" >
+
+    <RelativeLayout
+        android:id="@+id/topbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#ff0000" >
+
+        <ImageButton
+            android:id="@+id/close_Btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:padding="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/clear" 
+            android:onClick="closeThis" />
+
+        <ImageButton
+            android:id="@+id/return_Btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="#00000000"
+            android:padding="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/return_btn"
+            android:onClick="goBack" />
+        
+        <ImageButton
+            android:id="@+id/go_Btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            
+            android:layout_toRightOf="@+id/return_Btn"
+            android:background="#00000000"
+            android:padding="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/go_btn"
+            android:onClick="goForward" />
+
+        <ImageButton
+            android:id="@+id/refresh_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/go_Btn"
+            android:background="#00000000"
+            android:padding="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/refresh"
+            android:onClick="refresh" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/topbar_layout"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.silencedance"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+
+    <!-- Bmob -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 定位 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 闹钟备忘录 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 计步器 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="com.example.tools.ContextApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+
+        <!-- 以下是环信添加开始 -->
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="370784#silencedance" />
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <!-- 以上是环信添加结束 -->
+
+        <activity
+            android:name="com.example.silencedance.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.GuideActivity"
+            android:label="@string/title_activity_guide" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.silencedance.CircleActivity"
+            android:label="@string/title_activity_circle" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.MyActivity"
+            android:label="@string/title_activity_my" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.StartActivity"
+            android:label="@string/title_activity_start" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.CircleTalkActivity"
+            android:label="@string/title_activity_circle_talk" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.CircleDynamicActivity"
+            android:label="@string/title_activity_circle_dynamic" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.StartMenuActivity"
+            android:label="@string/title_activity_start_menu" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.SetActivity"
+            android:label="@string/title_activity_set"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.DialogActivity"
+            android:label="@string/title_activity_dialog"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.MusicListActivity"
+            android:label="@string/title_activity_music_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.PlayMusicActivity"
+            android:label="@string/title_activity_play_music"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.PlayMusicWithDanceActivity"
+            android:label="@string/title_activity_play_music_with_dance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <service android:name="com.example.service.LocalMusicService" >
+            <intent-filter>
+                <action android:name="com.example.service.LocalMusicService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.example.silencedance.UserInfoActivity"
+            android:label="@string/title_activity_user_info" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.InsertDynamicActivity"
+            android:label="@string/title_activity_insert_dynamic" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.WebActivity"
+            android:label="@string/title_activity_web" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.VideoLinkItemActivity"
+            android:label="@string/title_activity_video_link_item" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.ScanResultActivity"
+            android:label="@string/title_activity_scan_result"
+            android:theme="@android:style/Theme.NoDisplay" >
+        </activity>
+        <activity
+            android:name="com.zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.DownloadActivity"
+            android:label="@string/title_activity_download" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.UserUpdateActivity"
+            android:label="@string/title_activity_user_update" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.ChatActivity"
+            android:label="@string/title_activity_chat" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.CreateCircleActivity"
+            android:label="@string/title_activity_create_circle" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.JoinCircleActivity"
+            android:label="@string/title_activity_join_circle" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.SearchCircleActivity"
+            android:label="@string/title_activity_search_circle" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.CircleDetailActivity"
+            android:label="@string/title_activity_circle_detail" >
+        </activity>
+
+        <!-- 定位 -->
+        <service android:name="com.example.service.LocationSvc" />
+
+        <activity
+            android:name="com.example.silencedance.LiveServiceActivity"
+            android:label="@string/title_activity_live_service" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.ClockActivity"
+            android:label="@string/title_activity_clock" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.WeatherActivity"
+            android:label="@string/title_activity_weather" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.ClockAlertActivity"
+            android:label="@string/title_activity_clock_alert" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.ClockEditActivity"
+            android:label="@string/title_activity_clock_edit" >
+        </activity>
+
+        <!-- 备忘录 -->
+        <receiver android:name="com.example.alert.AlarmReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ALARMRECEIVER" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.example.silencedance.MusicSearchActivity"
+            android:label="@string/title_activity_music_search" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.MusicDetailActivity"
+            android:label="@string/title_activity_music_detail" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.AccountActivity"
+            android:label="@string/title_activity_account" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.InsertAccountActivity"
+            android:label="@string/title_activity_insert_account" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.SelectAccountTypeActivity"
+            android:label="@string/title_activity_select_account_type" >
+        </activity>
+
+        <service
+            android:name="com.example.service.LocalService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.example.silencedance.MusicListWithDanceActivity"
+            android:label="@string/title_activity_music_list_with_dance" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.PedometerActivity"
+            android:label="@string/title_activity_pedometer" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.StepSettingsActivity"
+            android:label="@string/title_activity_step_settings" >
+        </activity>
+
+        <!-- 计步器 -->
+        <service android:name="com.example.pedometer.StepService" />
+
+        <activity
+            android:name="com.example.silencedance.WeightActivity"
+            android:label="@string/title_activity_weight" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.ShowWeightActivity"
+            android:label="@string/title_activity_show_weight" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.FoodActivity"
+            android:label="@string/title_activity_food" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.EmotionActivity"
+            android:label="@string/title_activity_emotion" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.KeepBodyActivity"
+            android:label="@string/title_activity_keep_body" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.KeepFaceActivity"
+            android:label="@string/title_activity_keep_face" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.HealthNewActivity"
+            android:label="@string/title_activity_health_new" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.MedicalCareActivity"
+            android:label="@string/title_activity_medical_care" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.NewInfoActivity"
+            android:label="@string/title_activity_new_info" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.ThinBodyActivity"
+            android:label="@string/title_activity_thin_body" >
+        </activity>
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"
+            android:label="@string/title_activity_ease_baidu"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
+            android:label="@string/title_activity_ease_big_image"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.MyCircleListDialogActivity"
+            android:label="@string/title_activity_my_circle_list_dialog"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.GroupsActivity"
+            android:label="@string/title_em_fragment_groups"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.example.silencedance.FeedBackActivity"
+            android:label="@string/title_activity_feed_back" >
+        </activity>
+    </application>
+
+</manifest>

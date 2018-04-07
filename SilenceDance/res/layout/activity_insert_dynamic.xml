@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".InsertDynamicActivity" >
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/top_bar_include"
+            layout="@layout/top_bar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="写动态"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/etDynamicContent"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/top_bar"
+        android:layout_margin="10dp"
+        android:background="@drawable/text_input"
+        android:ems="150"
+        android:gravity="top" />
+
+    <ImageView
+        android:id="@+id/ivDynamicPicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/etDynamicContent"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_long_grey"
+        android:padding="20dp"
+        android:src="@drawable/add_white" />
+
+    <Button
+        android:id="@+id/btDynamicPublic"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ivDynamicPicture"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_long_red"
+        android:text="发表"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".StartMenuActivity" >
+
+    <include
+        android:id="@+id/top_bar_include"
+        layout="@layout/top_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="通知"
+        android:textColor="#ffffff"
+        android:textSize="22dp" />
+
+    <ListView
+        android:id="@+id/lvShowVideoInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar_include"
+        android:divider="#f0f0f0"
+        android:dividerHeight="8dp" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/top_bar_include"
+        layout="@layout/top_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="搜索"
+        android:textColor="#ffffff"
+        android:textSize="22dp" />
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/top_bar_include"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        tools:ignore="RtlHardcoded" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/search_music" />
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:hint="搜索歌曲，歌手等"
+            android:paddingLeft="40dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_navigation"
+            tools:ignore="RtlCompat,HardcodedText,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/bt_online_search"
+            android:layout_width="60dp"
+            android:layout_height="49dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_ltem"
+            android:text="搜索"
+            android:textColor="@color/main_orange"
+            android:textSize="@dimen/txt_size_navigation"
+            tools:ignore="RtlHardcoded,HardcodedText" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/edt_search"
+            android:layout_marginRight="16dp"
+            android:background="@color/main_orange"
+            tools:ignore="RtlHardcoded" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:divider="@color/item_focuse"
+        android:dividerHeight="0.1dp" >
+    </ListView>
+
+</RelativeLayout>

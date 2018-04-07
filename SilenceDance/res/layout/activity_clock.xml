@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    tools:context="zhaochen.memorandum.MainActivity" >
+
+    <include
+        android:id="@+id/top_bar_include"
+        layout="@layout/top_bar" />
+
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" 
+        android:layout_marginLeft="50dp"
+        android:background="#004a4a4a"
+        android:queryHint="@string/search_hint" >
+    </SearchView>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/createButton"
+        android:layout_below="@id/searchView" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_long_white"
+        android:text="添加"
+        android:textColor="#ff0000"
+        android:textSize="20sp" />
+
+</RelativeLayout>

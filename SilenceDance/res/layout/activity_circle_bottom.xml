@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#ff0000"
+    android:orientation="horizontal" 
+    >
+
+    <LinearLayout
+        android:id="@+id/tab_circleTalk"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/ibCircleTalk"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#00ffffff"
+            android:clickable="false"
+            android:src="@drawable/talking" />
+
+        <TextView
+            android:id="@+id/tvCircleTalk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="聊天"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_circleDynamic"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/ibCircleDynamic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#00ffffff"
+            android:clickable="false"
+            android:src="@drawable/dynamiced" />
+
+        <TextView
+            android:id="@+id/tvCircleDynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="动态"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

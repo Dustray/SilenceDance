@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<set xmlns:android="http://schemas.android.com/apk/res/android" >  
+    <!--   
+        fromXDelta为动画起始时X坐标位置  
+        toXDelta为动画结束时X坐标位置  
+        duration为动画完成移动需要的时间  
+    -->  
+    <translate  
+        android:duration="2000"  
+        android:fromXDelta="0"  
+        android:toXDelta="-100%"/>  
+     
+    <!--  
+        fromAlpha为动画起始时透明度  
+        toAlpha为动画结束时透明度  
+        duration为透明度完成改变需要的时间  
+    -->  
+    <alpha  
+        android:fromAlpha="1"  
+        android:toAlpha="0.3"  
+        android:duration="2000"/>  
+</set>  

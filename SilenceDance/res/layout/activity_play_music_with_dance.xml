@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#50000000" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/root"
+        android:background="#60000000"
+        android:onClick="closeMe" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:clickable="false" >
+
+        <ImageView
+            android:id="@+id/rootBackground"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/separate_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:background="#60ff0000"
+            android:onClick="closeMe" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/pull_down" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/top_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separate_bar" >
+
+            <RelativeLayout
+                android:id="@+id/music_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" >
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="显示歌名"
+                    android:textColor="#ff0000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/singer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/name"
+                    android:gravity="center_vertical"
+                    android:text="显示歌手"
+                    android:textColor="#ff5050"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/playsyn_setting_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#00000000"
+                android:src="@drawable/set" />
+
+            <ImageButton
+                android:id="@+id/music_list_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#00000000"
+                android:src="@drawable/music" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/center_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/top_area"
+            android:gravity="center_vertical" >
+
+            <ImageButton
+                android:id="@+id/music_slow_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/music_slow_red" />
+
+            <TextView
+                android:id="@+id/playtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seekbar"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/music_slow_btn"
+                android:text="00:00"
+                android:textColor="#ff0000" />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/music_fast_btn"
+                android:layout_toRightOf="@+id/music_slow_btn"
+                android:maxHeight="4.0dip"
+                android:minHeight="4.0dip"
+                android:progressDrawable="@drawable/seekbar_style"
+                android:thumb="@drawable/thumb" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seekbar"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/music_fast_btn"
+                android:text="00:00"
+                android:textColor="#ff0000" />
+
+            <ImageButton
+                android:id="@+id/music_fast_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:background="#00000000"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/music_fast_red" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/center_area" >
+
+            <ImageButton
+                android:id="@+id/lastBtn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_toLeftOf="@+id/playBtn"
+                android:background="#00000000"
+                android:padding="6dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/music_last" />
+
+            <ImageButton
+                android:id="@+id/playBtn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:padding="6dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/music_pause" />
+
+            <ImageButton
+                android:id="@+id/nextBtn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_toRightOf="@+id/playBtn"
+                android:background="#00000000"
+                android:padding="6dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/music_next" />
+
+            <ImageButton
+                android:id="@+id/button1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/synchronize"
+                android:onClick="syn_m"
+                android:text="手动同步" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

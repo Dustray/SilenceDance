@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".LoginActivity" >
+
+    <include
+        android:id="@+id/top_bar_include"
+        layout="@layout/top_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="登录"
+        android:textColor="#ffffff"
+        android:textSize="22dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar_include"
+        android:background="#ffffff"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="112dp"
+            android:background="@drawable/text_input"
+            android:drawableLeft="@drawable/etphone"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="请输入手机号" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignLeft="@+id/etPhone"
+            android:layout_below="@+id/etPhone"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/text_input"
+            android:drawableLeft="@drawable/etpass"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="请输入密码"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/etPass"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_long_red"
+            android:text="登录"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tvToegister"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/btLogin"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/btn_long_white"
+            android:onClick="toRegister"
+            android:text="注册账号"
+            android:textColor="#af0000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather_background"
+    tools:context=".WeatherActivity" >
+
+    <ImageButton
+        android:id="@+id/goback_btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#00000000"
+        android:onClick="goBack"
+        android:scaleType="fitXY"
+        android:src="@drawable/keyboard_arrow_left" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="天气"
+        android:textColor="#ffffff"
+        android:textSize="22dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_long_grey"
+            android:drawableLeft="@drawable/icons_weather_city"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:paddingLeft="10dp" />
+
+        <ImageButton
+            android:id="@+id/btnQuery"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:paddingBottom="10dp"
+            android:paddingTop="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icons_weather_query" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvFutureWeather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="#00000000"
+        android:dividerHeight="10dp"
+        android:layoutAnimation="@anim/weather_list_layout_animation" >
+    </ListView>
+
+</RelativeLayout>

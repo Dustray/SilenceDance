@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    tools:context=".CircleDynamicActivity" >
+
+    <ListView
+        android:id="@+id/lvDynamic"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:divider="#f0f0f0"
+        android:focusable="false"
+        android:scrollbars="none" >
+    </ListView>
+
+    <ImageButton
+        android:id="@+id/ibInsertDynamic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_round_linkman_red"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add" />
+
+</RelativeLayout>

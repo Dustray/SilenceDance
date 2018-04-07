@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="libs/Bmob_Push_V0.9beta_20160520.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/BmobSDK_V3.4.7_0527.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/okhttp-3.2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/okio-1.7.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/ksoap2-android-assembly-3.0.0-jar-with-dependencies.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/MobCommons-2016.0303.1229.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/MobTools-2016.0303.1229.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/SMSSDK-2.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/EaseUI_CN/libs/hyphenatechat_3.1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="/EaseUI_CN/libs/BaiduLBS_Android.jar"/>
+	<classpathentry exported="true" kind="lib" path="/EaseUI_CN/libs/glide-3.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/EaseUI_CN/libs/google-play-services.jar"/>
+	<classpathentry exported="true" kind="lib" path="/EaseUI_CN/libs/HwPush_SDK_V2705_nomap.jar"/>
+	<classpathentry exported="true" kind="lib" path="/EaseUI_CN/libs/MiPush_SDK_Client_2_2_19.jar"/>
+	<classpathentry exported="true" kind="lib" path="/EaseUI_CN/libs/org.apache.http.legacy.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/gson-2.2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jsoup-1.8.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/universal-image-loader-1.9.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="/EaseUI_CN/libs/android-support-v4.jar"/>
+	<classpathentry exported="true" kind="lib" path="/BarCodeTest/libs/zxing.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
